@@ -1,5 +1,6 @@
 'use strict';
-// import * as $ from 'jquery';
+import * as $ from 'jquery';
+import './slick.min';
 
 const mobileWidth = 767;
 let isMobile = checkWidth();
@@ -75,6 +76,75 @@ window.addEventListener('load', function () {
                 popup.classList.remove('active');
                 document.body.classList.remove('no-scrolling');
             }
+        }
+    })();
+
+    (function headerSlider() {
+        if (!document.querySelector('.header__jars')) {
+            return;
+        }
+
+        const sliderSelector = '.header__jars';
+
+        if (isMobile) {
+            initSlider(sliderSelector);
+        }
+
+        window.addEventListener('resize', function (e) {
+            if (isMobile) {
+                initSlider(sliderSelector);
+                return;
+            }
+
+            destroySlider(sliderSelector);
+        });
+
+        function initSlider(slider) {
+            $(slider).slick({
+                infinite: true,
+                slidesToShow: 1,
+                swipeToSlide: true,
+                prevArrow: '',
+                nextArrow: '',
+            })
+        }
+
+        function destroySlider(slider) {
+            $(slider).slick('unslick');
+        }
+    })();
+
+    (function ricepsSlider() {
+        if (!document.querySelector('.recipes')) {
+            return;
+        }
+
+        const sliderSelector = '.recipes';
+
+        if (isMobile) {
+            initSlider(sliderSelector);
+        }
+
+        window.addEventListener('resize', function (e) {
+            if (isMobile) {
+                initSlider(sliderSelector);
+                return;
+            }
+
+            destroySlider(sliderSelector);
+        });
+
+        function initSlider(slider) {
+            $(slider).slick({
+                infinite: true,
+                slidesToShow: 1,
+                prevArrow: '<span class="recipes__arrow lt"></span>',
+                nextArrow: '<span class="recipes__arrow rt"></span>',
+            })
+        }
+
+        function destroySlider(slider) {
+            $(slider).slick('unslick');
         }
     })();
 });
