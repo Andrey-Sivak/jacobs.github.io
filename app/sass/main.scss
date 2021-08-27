@@ -223,6 +223,10 @@ body {
           transform: translateY(0);
           animation-name: nut1;
           animation-duration: 5s;
+
+          @include response-to(small) {
+            display: none;
+          }
         }
 
         &.second {
@@ -230,6 +234,13 @@ body {
           transform: translateY(0);
           animation-name: nut2;
           animation-duration: 4s;
+
+          @include response-to(small) {
+            bottom: unset;
+            top: 100%;
+            z-index: 2;
+            right: 0;
+          }
         }
 
         &.third {
@@ -238,6 +249,14 @@ body {
           transform: translateY(0);
           animation-name: nut3;
           animation-duration: 3s;
+
+          @include response-to(small) {
+            width: 60px;
+            height: 55px;
+            left: -54px;
+            top: -362px;
+            bottom: unset;
+          }
         }
       }
 
@@ -249,6 +268,14 @@ body {
           transform: translateY(0);
           animation-name: caramel1;
           animation-duration: 3.5s;
+
+          @include response-to(small) {
+            top: -59px;
+            z-index: 2;
+            right: -30px;
+            bottom: unset;
+            left: unset;
+          }
         }
 
         &.second {
@@ -258,6 +285,10 @@ body {
           transform: translateY(0);
           animation-name: caramel2;
           animation-duration: 4s;
+
+          @include response-to(small) {
+            display: none;
+          }
         }
 
         &.third {
@@ -266,6 +297,14 @@ body {
           transform: translateY(0);
           animation-name: caramel3;
           animation-duration: 3s;
+
+          @include response-to(small) {
+            width: 60px;
+            height: 55px;
+            left: -54px;
+            top: -362px;
+            bottom: unset;
+          }
         }
       }
 
@@ -336,7 +375,7 @@ body {
         line-height: 130%;
         color: #E6CFA0;
         position: relative;
-        z-index: 1;
+        z-index: 3;
       }
     }
 
@@ -530,10 +569,19 @@ body {
     transform: translateX(-50%);
 
     @include response-to(small) {
-      transform: translateX(-50%) rotate(12deg);
-      left: -50%;
-      bottom: 110px;
-      z-index: 0;
+      display: none;
+    }
+
+    &-mob {
+      display: none;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 70px;
+
+      @include response-to(small) {
+        display: block;
+      }
     }
   }
 

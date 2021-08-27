@@ -524,6 +524,9 @@ body {
                 animation-name: nut1;
         -webkit-animation-duration: 5s;
                 animation-duration: 5s; }
+        @media (max-width: 767px) {
+          .header__jars_about .nut-animate.one {
+            display: none; } }
       .header__jars_about .nut-animate.second {
         bottom: calc(100% + 113px);
         -webkit-transform: translateY(0);
@@ -533,6 +536,12 @@ body {
                 animation-name: nut2;
         -webkit-animation-duration: 4s;
                 animation-duration: 4s; }
+        @media (max-width: 767px) {
+          .header__jars_about .nut-animate.second {
+            bottom: unset;
+            top: 100%;
+            z-index: 2;
+            right: 0; } }
       .header__jars_about .nut-animate.third {
         right: -38px;
         bottom: -55px;
@@ -543,6 +552,13 @@ body {
                 animation-name: nut3;
         -webkit-animation-duration: 3s;
                 animation-duration: 3s; }
+        @media (max-width: 767px) {
+          .header__jars_about .nut-animate.third {
+            width: 60px;
+            height: 55px;
+            left: -54px;
+            top: -362px;
+            bottom: unset; } }
       .header__jars_about .caramel-animate.one {
         bottom: calc(100% + 130px);
         left: 85px;
@@ -553,6 +569,13 @@ body {
                 animation-name: caramel1;
         -webkit-animation-duration: 3.5s;
                 animation-duration: 3.5s; }
+        @media (max-width: 767px) {
+          .header__jars_about .caramel-animate.one {
+            top: -59px;
+            z-index: 2;
+            right: -30px;
+            bottom: unset;
+            left: unset; } }
       .header__jars_about .caramel-animate.second {
         bottom: calc(100% + 15px);
         right: -35px;
@@ -564,6 +587,9 @@ body {
                 animation-name: caramel2;
         -webkit-animation-duration: 4s;
                 animation-duration: 4s; }
+        @media (max-width: 767px) {
+          .header__jars_about .caramel-animate.second {
+            display: none; } }
       .header__jars_about .caramel-animate.third {
         left: -62px;
         bottom: -82px;
@@ -574,6 +600,13 @@ body {
                 animation-name: caramel3;
         -webkit-animation-duration: 3s;
                 animation-duration: 3s; }
+        @media (max-width: 767px) {
+          .header__jars_about .caramel-animate.third {
+            width: 60px;
+            height: 55px;
+            left: -54px;
+            top: -362px;
+            bottom: unset; } }
       .header__jars_about-bg {
         position: absolute;
         left: 50%;
@@ -637,7 +670,7 @@ body {
         line-height: 130%;
         color: #E6CFA0;
         position: relative;
-        z-index: 1; }
+        z-index: 3; }
     .header__jars_arrow {
       position: absolute;
       z-index: 100;
@@ -828,12 +861,18 @@ body {
             transform: translateX(-50%); }
     @media (max-width: 767px) {
       .footer-bg {
-        -webkit-transform: translateX(-50%) rotate(12deg);
-            -ms-transform: translateX(-50%) rotate(12deg);
-                transform: translateX(-50%) rotate(12deg);
-        left: -50%;
-        bottom: 110px;
-        z-index: 0; } }
+        display: none; } }
+    .footer-bg-mob {
+      display: none;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      bottom: 70px; }
+      @media (max-width: 767px) {
+        .footer-bg-mob {
+          display: block; } }
   .footer__menu {
     position: relative;
     z-index: 2;
