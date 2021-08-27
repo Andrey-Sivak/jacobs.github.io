@@ -104,8 +104,8 @@ window.addEventListener('load', function () {
                 infinite: true,
                 slidesToShow: 1,
                 swipeToSlide: true,
-                prevArrow: '',
-                nextArrow: '',
+                prevArrow: '<span class="header__jars_arrow lt"></span>',
+                nextArrow: '<span class="header__jars_arrow rt"></span>',
             })
         }
 

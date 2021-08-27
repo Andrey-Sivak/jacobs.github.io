@@ -351,6 +351,9 @@ body {
   background-position: center 88px;
   background-repeat: no-repeat;
   background-size: initial; }
+  @media (max-width: 767px) {
+    body {
+      background-size: 220%; } }
 
 .caption {
   text-align: center;
@@ -426,7 +429,7 @@ body {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-    .header__jars .slick-list {
+    .header__jars .slick-track {
       padding-bottom: 100px; }
     .header__jars_item {
       position: relative; }
@@ -567,6 +570,22 @@ body {
         color: #E6CFA0;
         position: relative;
         z-index: 1; }
+    .header__jars_arrow {
+      position: absolute;
+      z-index: 100;
+      width: 14px;
+      height: 28px;
+      top: 102px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: pointer; }
+      .header__jars_arrow.lt {
+        left: 32px;
+        background-image: url("../img/header_left.svg"); }
+      .header__jars_arrow.rt {
+        right: 32px;
+        background-image: url("../img/header_right.svg"); }
 
 .main {
   max-width: 1000px;
@@ -592,6 +611,22 @@ body {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 33px; }
+    .main .recipes__arrow {
+      position: absolute;
+      z-index: 100;
+      width: 50px;
+      height: 50px;
+      top: 149px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: pointer; }
+      .main .recipes__arrow.lt {
+        left: 24px;
+        background-image: url("../img/ricepes-lt.svg"); }
+      .main .recipes__arrow.rt {
+        right: 24px;
+        background-image: url("../img/ricepes-rt.svg"); }
     .main .recipes__bg {
       position: absolute;
       z-index: 0;
