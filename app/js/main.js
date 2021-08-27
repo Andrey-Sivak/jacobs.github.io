@@ -63,6 +63,7 @@ window.addEventListener('load', function () {
             const popup = document.querySelector(`.popup[data-popup="${id}"]`);
 
             popup.classList.add('active');
+            document.body.classList.add('no-scrolling');
         }
 
         function hidePopup(e) {
@@ -72,6 +73,7 @@ window.addEventListener('load', function () {
                 e.preventDefault();
                 const popup = document.querySelector('.popup.active');
                 popup.classList.remove('active');
+                document.body.classList.remove('no-scrolling');
             }
         }
     })();

@@ -35,6 +35,37 @@
       padding: 65px 21px 58px;
     }
 
+    .tag {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 24px;
+      text-transform: uppercase;
+      width: 135px;
+      height: 30px;
+      text-align: center;
+      padding-top: 3px;
+      left: -14px;
+      top: 30px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &.nut {
+        background-image: url('../../img/nut-tag-bg.svg');
+      }
+
+      &.caramel {
+        background-image: url('../../img/caramel-tag-bg.svg');
+      }
+
+      &.bottom {
+        top: 70px;
+      }
+    }
+
     .recipes__item_img {
       display: block;
       width: fit-content;
