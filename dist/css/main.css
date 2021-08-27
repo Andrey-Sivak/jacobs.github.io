@@ -478,8 +478,7 @@ body {
               -ms-transform: translateX(-64%);
                   transform: translateX(-64%); } }
     .header__jars_img {
-      display: block;
-      height: 300px; }
+      display: block; }
       @media (max-width: 767px) {
         .header__jars_img {
           position: relative;
@@ -488,6 +487,7 @@ body {
           margin-right: 0;
           opacity: 0;
           left: 50%;
+          height: 300px;
           -webkit-transition: all ease-in-out .3s;
           transition: all ease-in-out .3s; } }
     .header__jars_about {

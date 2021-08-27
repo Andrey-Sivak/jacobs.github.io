@@ -177,7 +177,6 @@ body {
 
     &_img {
       display: block;
-      height: 300px;
 
       @include response-to(small) {
         position: relative;
@@ -186,6 +185,7 @@ body {
         margin-right: 0;
         opacity: 0;
         left: 50%;
+        height: 300px;
         @include transition-ease;
       }
     }
