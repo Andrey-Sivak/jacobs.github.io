@@ -459,8 +459,9 @@ body {
         @media (max-width: 767px) {
           .header__jars_item.right .header__jars_img {
             width: 228px;
-            height: 300px;
-            margin-right: -23px; } }
+            -webkit-transform: translateX(-31%);
+                -ms-transform: translateX(-31%);
+                    transform: translateX(-31%); } }
       .header__jars_item.left .header__jars_about {
         right: 100%;
         top: 15px; }
@@ -470,15 +471,20 @@ body {
       @media (max-width: 767px) {
         .header__jars_item.left .header__jars_img {
           width: 205px;
-          height: 300px; } }
+          -webkit-transform: translateX(-64%);
+              -ms-transform: translateX(-64%);
+                  transform: translateX(-64%); } }
     .header__jars_img {
-      display: block; }
+      display: block;
+      height: 300px; }
       @media (max-width: 767px) {
         .header__jars_img {
+          position: relative;
           margin-bottom: 63px;
-          margin-left: auto;
-          margin-right: auto !important;
+          margin-left: 0;
+          margin-right: 0;
           opacity: 0;
+          left: 50%;
           -webkit-transition: all ease-in-out .3s;
           transition: all ease-in-out .3s; } }
     .header__jars_about {
@@ -639,7 +645,7 @@ body {
             -ms-transform: scale(1.02);
                 transform: scale(1.02);
         box-shadow: 0 0 25px #02240E; }
-      .main .recipes__item:before, .main .recipes__item:after {
+      .main .recipes__item .tag {
         position: absolute;
         z-index: 2;
         font-weight: bold;
@@ -656,14 +662,12 @@ body {
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat; }
-      .main .recipes__item:nth-of-type(3):after, .main .recipes__item:nth-of-type(4):after, .main .recipes__item:nth-of-type(5):after, .main .recipes__item:nth-of-type(6):after {
-        content: attr(data-caramel);
-        background-image: url("../img/caramel-tag-bg.svg"); }
-      .main .recipes__item:nth-of-type(5):after, .main .recipes__item:nth-of-type(6):after {
-        top: 60px; }
-      .main .recipes__item:before {
-        content: attr(data-nut);
-        background-image: url("../img/nut-tag-bg.svg"); }
+        .main .recipes__item .tag.caramel {
+          background-image: url("../img/caramel-tag-bg.svg"); }
+          .main .recipes__item .tag.caramel.bottom {
+            top: 60px; }
+        .main .recipes__item .tag.nut {
+          background-image: url("../img/nut-tag-bg.svg"); }
       @media (max-width: 767px) {
         .main .recipes__item {
           max-width: 300px;

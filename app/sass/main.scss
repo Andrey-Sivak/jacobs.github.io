@@ -145,8 +145,7 @@ body {
 
           @include response-to(small) {
             width: 228px;
-            height: 300px;
-            margin-right: -23px;
+            transform: translateX(-31%);
           }
         }
       }
@@ -166,7 +165,7 @@ body {
 
           @include response-to(small) {
             width: 205px;
-            height: 300px;
+            transform: translateX(-64%);
           }
         }
       }
@@ -174,12 +173,15 @@ body {
 
     &_img {
       display: block;
+      height: 300px;
 
       @include response-to(small) {
+        position: relative;
         margin-bottom: 63px;
-        margin-left: auto;
-        margin-right: auto!important;
+        margin-left: 0;
+        margin-right: 0;
         opacity: 0;
+        left: 50%;
         @include transition-ease;
       }
     }
@@ -330,8 +332,7 @@ body {
         box-shadow: 0 0 25px #02240E;
       }
 
-      &:before,
-      &:after {
+      .tag {
         position: absolute;
         z-index: 2;
         font-weight: bold;
@@ -348,24 +349,18 @@ body {
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-      }
 
-      &:nth-of-type(3):after,
-      &:nth-of-type(4):after,
-      &:nth-of-type(5):after,
-      &:nth-of-type(6):after {
-        content: attr(data-caramel);
-        background-image: url('../img/caramel-tag-bg.svg');
-      }
+        &.caramel {
+          background-image: url('../img/caramel-tag-bg.svg');
 
-      &:nth-of-type(5):after,
-      &:nth-of-type(6):after {
-        top: 60px;
-      }
+          &.bottom {
+            top: 60px;
+          }
+        }
 
-      &:before {
-        content: attr(data-nut);
-        background-image: url('../img/nut-tag-bg.svg');
+        &.nut {
+          background-image: url('../img/nut-tag-bg.svg');
+        }
       }
 
       @include response-to(small) {
