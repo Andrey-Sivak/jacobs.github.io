@@ -47,24 +47,30 @@ window.addEventListener('load', function () {
             return;
         }
 
-        const popupBtns = [...document.querySelectorAll('[data-popup="popup"')];
-        const popup = document.querySelector('.popup');
+        const popupBtns = [...document.querySelectorAll('.recipes__item')];
+        const popups = [...document.querySelectorAll('.popup')];
 
-        popup.addEventListener('click', hidePopup);
+        popups.forEach(p => {
+            p.addEventListener('click', hidePopup);
+        });
 
         popupBtns.forEach(p => {
             p.addEventListener('click', showPopup);
         });
 
         function showPopup() {
+            const id = this.dataset.modal;
+            const popup = document.querySelector(`.popup[data-popup="${id}"]`);
+
             popup.classList.add('active');
         }
 
         function hidePopup(e) {
             const target = e.target;
 
-            if (target.dataset) {
+            if (target.dataset.close) {
                 e.preventDefault();
+                const popup = document.querySelector('.popup.active');
                 popup.classList.remove('active');
             }
         }
