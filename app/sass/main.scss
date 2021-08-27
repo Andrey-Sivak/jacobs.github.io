@@ -207,6 +207,68 @@ body {
         @include transition-ease;
       }
 
+      .nut-animate,
+      .caramel-animate {
+        position: absolute;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+
+      .nut-animate {
+
+        &.one {
+          left: calc(100% + 10px);
+          z-index: 10;
+          top: 121px;
+          transform: translateY(0);
+          animation-name: nut1;
+          animation-duration: 5s;
+        }
+
+        &.second {
+          bottom: calc(100% + 113px);
+          transform: translateY(0);
+          animation-name: nut2;
+          animation-duration: 4s;
+        }
+
+        &.third {
+          right: -38px;
+          bottom: -55px;
+          transform: translateY(0);
+          animation-name: nut3;
+          animation-duration: 3s;
+        }
+      }
+
+      .caramel-animate {
+
+        &.one {
+          bottom: calc(100% + 130px);
+          left: 85px;
+          transform: translateY(0);
+          animation-name: caramel1;
+          animation-duration: 3.5s;
+        }
+
+        &.second {
+          bottom: calc(100% + 15px);
+          right: -35px;
+          z-index: 10;
+          transform: translateY(0);
+          animation-name: caramel2;
+          animation-duration: 4s;
+        }
+
+        &.third {
+          left: -62px;
+          bottom: -82px;
+          transform: translateY(0);
+          animation-name: caramel3;
+          animation-duration: 3s;
+        }
+      }
+
       &-bg {
         position: absolute;
         left: 50%;
@@ -534,4 +596,88 @@ body {
   }
 }
 
+
+@keyframes nut2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-40px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes nut1 {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-80px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes nut3 {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(40px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes caramel1 {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-40px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes caramel2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(50px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes caramel3 {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 

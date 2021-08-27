@@ -506,6 +506,74 @@ body {
           opacity: 0;
           -webkit-transition: all ease-in-out .3s;
           transition: all ease-in-out .3s; } }
+      .header__jars_about .nut-animate,
+      .header__jars_about .caramel-animate {
+        position: absolute;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        -webkit-animation-timing-function: ease-in-out;
+                animation-timing-function: ease-in-out; }
+      .header__jars_about .nut-animate.one {
+        left: calc(100% + 10px);
+        z-index: 10;
+        top: 121px;
+        -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+                transform: translateY(0);
+        -webkit-animation-name: nut1;
+                animation-name: nut1;
+        -webkit-animation-duration: 5s;
+                animation-duration: 5s; }
+      .header__jars_about .nut-animate.second {
+        bottom: calc(100% + 113px);
+        -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+                transform: translateY(0);
+        -webkit-animation-name: nut2;
+                animation-name: nut2;
+        -webkit-animation-duration: 4s;
+                animation-duration: 4s; }
+      .header__jars_about .nut-animate.third {
+        right: -38px;
+        bottom: -55px;
+        -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+                transform: translateY(0);
+        -webkit-animation-name: nut3;
+                animation-name: nut3;
+        -webkit-animation-duration: 3s;
+                animation-duration: 3s; }
+      .header__jars_about .caramel-animate.one {
+        bottom: calc(100% + 130px);
+        left: 85px;
+        -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+                transform: translateY(0);
+        -webkit-animation-name: caramel1;
+                animation-name: caramel1;
+        -webkit-animation-duration: 3.5s;
+                animation-duration: 3.5s; }
+      .header__jars_about .caramel-animate.second {
+        bottom: calc(100% + 15px);
+        right: -35px;
+        z-index: 10;
+        -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+                transform: translateY(0);
+        -webkit-animation-name: caramel2;
+                animation-name: caramel2;
+        -webkit-animation-duration: 4s;
+                animation-duration: 4s; }
+      .header__jars_about .caramel-animate.third {
+        left: -62px;
+        bottom: -82px;
+        -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+                transform: translateY(0);
+        -webkit-animation-name: caramel3;
+                animation-name: caramel3;
+        -webkit-animation-duration: 3s;
+                animation-duration: 3s; }
       .header__jars_about-bg {
         position: absolute;
         left: 50%;
@@ -823,5 +891,137 @@ body {
     .footer__text_bottom {
       font-size: 10px;
       line-height: 13px; }
+
+@-webkit-keyframes nut2 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes nut2 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@-webkit-keyframes nut1 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes nut1 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@-webkit-keyframes nut3 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes nut3 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@-webkit-keyframes caramel1 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes caramel1 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@-webkit-keyframes caramel2 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes caramel2 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@-webkit-keyframes caramel3 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes caramel3 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
 
 /*# sourceMappingURL=main.css.map */
