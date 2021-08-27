@@ -477,7 +477,7 @@ body {
         .header__jars_img {
           margin-bottom: 63px;
           margin-left: auto;
-          margin-right: auto;
+          margin-right: auto !important;
           opacity: 0;
           -webkit-transition: all ease-in-out .3s;
           transition: all ease-in-out .3s; } }
@@ -666,8 +666,9 @@ body {
         background-image: url("../img/nut-tag-bg.svg"); }
       @media (max-width: 767px) {
         .main .recipes__item {
-          margin-left: -14px;
-          max-width: 300px; } }
+          max-width: 300px;
+          margin-left: calc((100vw - 300px) / 2);
+          margin-right: calc((100vw - 300px) / 2); } }
       .main .recipes__item_title {
         color: #D4B464;
         text-transform: uppercase;
