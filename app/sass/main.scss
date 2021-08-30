@@ -72,6 +72,7 @@ body {
     margin-bottom: 41px;
     margin-left: auto;
     margin-right: auto;
+    image-rendering: pixelated;
 
     @include response-to(small) {
       width: 90px;
@@ -177,6 +178,7 @@ body {
 
     &_img {
       display: block;
+      image-rendering: pixelated;
 
       @include response-to(small) {
         position: relative;
@@ -404,12 +406,15 @@ body {
 }
 
 .main {
+  position: relative;
+  z-index: 3;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 
   .recipes {
+    z-index: 1;
     position: relative;
     margin-top: 50px;
     display: flex;
@@ -481,6 +486,10 @@ body {
         box-shadow: 0 0 25px #02240E;
       }
 
+      &_img {
+        image-rendering: pixelated;
+      }
+
       .tag {
         position: absolute;
         z-index: 2;
@@ -532,6 +541,8 @@ body {
   }
 
   .shops {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -555,6 +566,7 @@ body {
 }
 
 .footer {
+  z-index: 2;
   position: relative;
   margin-top: 203px;
 

@@ -391,7 +391,11 @@ body {
     display: block;
     margin-bottom: 41px;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    -ms-interpolation-mode: nearest-neighbor;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: pixelated; }
     @media (max-width: 767px) {
       .header__logo {
         width: 90px;
@@ -482,7 +486,11 @@ body {
               -ms-transform: translateX(-64%);
                   transform: translateX(-64%); } }
     .header__jars_img {
-      display: block; }
+      display: block;
+      -ms-interpolation-mode: nearest-neighbor;
+          image-rendering: -webkit-optimize-contrast;
+          image-rendering: -moz-crisp-edges;
+          image-rendering: pixelated; }
       @media (max-width: 767px) {
         .header__jars_img {
           position: relative;
@@ -693,11 +701,14 @@ body {
         background-image: url("../img/header_right.svg"); }
 
 .main {
+  position: relative;
+  z-index: 3;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   width: 100%; }
   .main .recipes {
+    z-index: 1;
     position: relative;
     margin-top: 50px;
     display: -webkit-box;
@@ -785,6 +796,11 @@ body {
             -ms-transform: scale(1.02);
                 transform: scale(1.02);
         box-shadow: 0 0 25px #02240E; }
+      .main .recipes__item_img {
+        -ms-interpolation-mode: nearest-neighbor;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: pixelated; }
       .main .recipes__item .tag {
         position: absolute;
         z-index: 2;
@@ -823,6 +839,8 @@ body {
         height: 36px;
         margin-top: 20px; }
   .main .shops {
+    position: relative;
+    z-index: 2;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -851,6 +869,7 @@ body {
           width: 148px; } }
 
 .footer {
+  z-index: 2;
   position: relative;
   margin-top: 203px; }
   @media (max-width: 767px) {
