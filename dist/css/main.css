@@ -856,7 +856,10 @@ body {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    margin-top: 43px; }
+    margin-top: 43px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto; }
     @media (max-width: 767px) {
       .main .shops {
         padding-left: 30px;

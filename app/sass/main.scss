@@ -548,6 +548,9 @@ body {
     align-items: center;
     flex-wrap: wrap;
     margin-top: 43px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 
     @include response-to(small) {
       padding-left: 30px;
