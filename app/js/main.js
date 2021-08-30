@@ -91,12 +91,14 @@ window.addEventListener('load', function () {
         }
 
         window.addEventListener('resize', function (e) {
-            if (isMobile) {
+            if (isMobile && !document.querySelector(`${sliderSelector}.slick-slider`)) {
                 initSlider(sliderSelector);
                 return;
             }
 
-            destroySlider(sliderSelector);
+            if (!isMobile && document.querySelector('.slick-slider')) {
+                destroySlider(sliderSelector);
+            }
         });
 
         function initSlider(slider) {
@@ -126,12 +128,14 @@ window.addEventListener('load', function () {
         }
 
         window.addEventListener('resize', function (e) {
-            if (isMobile) {
+            if (isMobile && !document.querySelector(`${sliderSelector}.slick-slider`)) {
                 initSlider(sliderSelector);
                 return;
             }
 
-            destroySlider(sliderSelector);
+            if (!isMobile && document.querySelector('.slick-slider')) {
+                destroySlider(sliderSelector);
+            }
         });
 
         function initSlider(slider) {
